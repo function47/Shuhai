@@ -6,5 +6,7 @@ update_compile_order -fileset sources_1
 #raise width mismatch warnings to errors
 set_msg_config -id "Synth 8-689" -new_severity ERROR
 #start synthesis
+
+reset_run synth_1
 launch_runs synth_1 -jobs 4
 wait_on_run synth_1

@@ -32,7 +32,7 @@ module wr_engine #(parameter ENGINE_ID = 0,
                    output m_axi_AWVALID,                       //wr address valid
                    output reg [ADDR_WIDTH - 1:0] m_axi_AWADDR, //wr byte address
                    output reg [ID_WIDTH - 1:0] m_axi_AWID,    //wr address id
-                   output reg [7:0] m_axi_AWLEN,               //wr burst = awlen+1, 
+                   output reg [3:0] m_axi_AWLEN,               //wr burst = awlen+1, 
                    output reg [2:0] m_axi_AWSIZE,              //wr 3'b101, 32B
                    output reg [1:0] m_axi_AWBURST,             //wr burst type: 01 (INC), 00 (FIXED)
                    output reg [1:0] m_axi_AWLOCK,              //wr no

@@ -42,7 +42,7 @@ module rd_engine #(
     output                        m_axi_ARVALID , //rd address valid
     output reg [ADDR_WIDTH - 1:0] m_axi_ARADDR  , //rd byte address
     output reg   [ID_WIDTH - 1:0] m_axi_ARID    , //rd address id
-    output reg              [7:0] m_axi_ARLEN   , //rd burst=awlen+1,
+    output reg              [3:0] m_axi_ARLEN   , //rd burst=awlen+1,
     output reg              [2:0] m_axi_ARSIZE  , //rd 3'b101, 32B
     output reg              [1:0] m_axi_ARBURST , //rd burst type: 01 (INC), 00 (FIXED)
     output reg              [1:0] m_axi_ARLOCK  , //rd no

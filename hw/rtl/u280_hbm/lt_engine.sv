@@ -50,7 +50,7 @@ module lt_engine #(
     output                     m_axi_AWVALID , //wr address valid
     output  [ADDR_WIDTH - 1:0] m_axi_AWADDR  , //wr byte address
     output  [  ID_WIDTH - 1:0] m_axi_AWID    , //wr address id
-    output               [7:0] m_axi_AWLEN   , //wr burst=awlen+1,
+    output               [3:0] m_axi_AWLEN   , //wr burst=awlen+1,
     output               [2:0] m_axi_AWSIZE  , //wr 3'b101, 32B
     output               [1:0] m_axi_AWBURST , //wr burst type: 01 (INC), 00 (FIXED)
     output               [1:0] m_axi_AWLOCK  , //wr no
@@ -78,7 +78,7 @@ module lt_engine #(
     output                     m_axi_ARVALID , //rd address valid
     output  [ADDR_WIDTH - 1:0] m_axi_ARADDR  , //rd byte address
     output    [ID_WIDTH - 1:0] m_axi_ARID    , //rd address id
-    output               [7:0] m_axi_ARLEN   , //rd burst=awlen+1,
+    output               [3:0] m_axi_ARLEN   , //rd burst=awlen+1,
     output               [2:0] m_axi_ARSIZE  , //rd 3'b101, 32B
     output               [1:0] m_axi_ARBURST , //rd burst type: 01 (INC), 00 (FIXED)
     output               [1:0] m_axi_ARLOCK  , //rd no
